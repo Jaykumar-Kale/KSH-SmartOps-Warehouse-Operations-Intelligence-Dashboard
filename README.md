@@ -1,82 +1,72 @@
-# KSH Interactive Dashboard  
+# KSH SmartOps – Interactive Warehouse Dashboard
 
-**Internship / Real-World Warehouse Solution**  
-*Developed by **Jaykumar Kale**  
+## Overview
+During my internship at KSH Group, warehouse operational data such as overtime (OT), complaints, approvals, and customer-wise activity was being tracked using Excel-based dashboards. While functional, these reports were manual, static, and difficult to scale or analyze efficiently.  
 
----
-
-## **Overview**
-
-During my internship at **KSH Logistics, Chakan, Pune**, I visited the warehouse and discussed operations with the warehouse manager. The warehouse uses Excel dashboards for tracking operations and overtime (OT), but they are **manual, non-scalable, and lack interactivity**.  
-
-This project focuses on developing an **interactive, web-based dashboard** that enables secure, warehouse-specific data entry and visualization, with automated reporting.
+This project focuses on converting those Excel reports into an **interactive dashboard** that provides clear visibility into warehouse operations and supports faster, data-driven decision-making.
 
 ---
 
-## **Problem Statement**
-
-- **Current Excel dashboards are not scalable.**  
-- Each warehouse requires **independent access**, ensuring one warehouse’s data does not interfere with another.  
-- Managers need **interactive insights**, complaint tracking, and automated report generation.  
-
----
-
-## **Solution**
-
-- **Web-Based Interactive Dashboard** built using:
-  - **Streamlit** for the web interface.
-  - **Pandas** for data cleaning and manipulation.
-  - **Plotly** for interactive visualizations.
-  - **FPDF** for auto-generated PDF reports.
-- Future scalability options: React + Node + PostgreSQL or Power BI integration for enterprise deployment.
-- **Login-based access per warehouse** can be implemented to ensure data security.
+## Problem at KSH
+- Operational data was maintained in **multiple Excel files**
+- Reports were **static** and required manual effort to update
+- Limited ability to **filter, drill down, or analyze trends**
+- Difficult to generate **consistent managerial reports**
+- Not suitable for scaling across multiple warehouses
 
 ---
 
-## **Features**
-
-- **Complaint Tracking:** Manage and view warehouse complaints and resolutions.  
-- **OT Cost Analysis:** Calculate overtime per employee or warehouse and track costs.  
-- **Approval Workflows:** Track approval status of operations and OT entries.  
-- **Customer-Wise Trends:** Visualize trends by customer, employee, or warehouse.  
-- **Auto-Generated Reports:** Export PDF reports for managerial review.  
-- **Interactive Charts & Filters:** Drill-down into data for deeper insights.  
-
----
-
-## **Data Requirements**
-
-The dashboard works with Excel files containing the following columns:
-
-- `Operation Date`  
-- `Warehouse`  
-- `Customer`  
-- `Employee Name`  
-- `Designation`  
-- `Contractor Name`  
-- `Start Time`  
-- `End Time`  
-- `Duration` (calculated automatically)  
-- `Remarks / Reasons`  
-- `Rate` (optional)  
-- `Total Amount`  
-- `Approved By`  
-- `Approval Date`  
-
-> Duration is calculated automatically from `Start Time` and `End Time`.
+## Why Excel Was Not Enough
+Excel worked for basic reporting but had limitations:
+- No interactive filtering or dynamic visualizations
+- High dependency on individuals to maintain reports
+- Time-consuming report preparation
+- Not designed for real-time insights or automation
+- Limited scope for future system integration
 
 ---
 
-## **Installation and Usage**
+## What I Built
+I developed a **web-based interactive dashboard** that allows warehouse data to be uploaded from Excel and instantly converted into meaningful insights.
 
-1. Clone this repository:
-```bash
-git clone https://github.com/Jaykumar-Kale/KSH-projects.git
-cd Dashboard
+The dashboard includes:
+- Excel file upload with validation
+- Warehouse-wise, customer-wise, and contractor-wise filtering
+- Overtime hours and cost analysis
+- Complaint and approval trend visualization
+- Interactive charts for operational insights
+- One-click export of filtered data and PDF manager reports
 
-2. Install dependencies:
-pip install -r requirements.txt
+This solution was built as a **Proof of Concept (PoC)** aligned with real warehouse requirements discussed during the internship.
 
-3. Run the dashboard locally:
-streamlit run ksh_ot_dashboard.py
+---
 
+## How It Helps Warehouse Managers
+- Reduces manual effort in report preparation
+- Provides clear visibility into OT cost and operational trends
+- Enables faster decision-making using interactive insights
+- Generates ready-to-share PDF reports for management
+- Acts as a foundation for future digital automation
+
+---
+
+## What I Learned
+- Understanding real-world warehouse operations and data flows
+- Converting business requirements into a working technical solution
+- Handling and cleaning real operational data
+- Designing dashboards with usability in mind
+- Building an authentic, explainable internship project
+
+---
+
+## Tech Stack
+- Python
+- Streamlit
+- Pandas
+- Plotly
+- FPDF
+
+---
+
+## Internship Context
+This project was developed during my **Operations Internship at KSH Group, Pune**, based on actual warehouse workflows and existing Excel-based reporting systems.
